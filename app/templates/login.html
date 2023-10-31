@@ -1,0 +1,15 @@
+{% extends 'auth_layout.html' %}
+{% block content %}
+		<h1>Login to your account</h1>
+		<form method="POST" action="{{ url_for('login') }}">
+			<label for="user-id">User ID</label>
+			<input type="text" id="user-id" class="form-control" name="user-id" value="" required>
+            
+			<label for="password">Password</label>
+			<input type="password" id="password" class="form-control" name="password" value="" required>
+            <br>
+			<input type="submit" value="Login">
+
+            <label>No account? Click here to <a href="/register">signup</a></label>
+		</form>
+{% endblock %}
