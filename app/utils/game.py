@@ -1,5 +1,5 @@
-from app import app, socketio
 from app.models import get_random_country, set_high_score
+import string
 
 class Game:
     def __init__(self, user_id):
@@ -9,6 +9,13 @@ class Game:
 
     def __del__(self):
         set_high_score(self.user_id, self.score)
+
+    def cmp_ans(self, str1, str2):
+        translator = str.maketrans('', '', string.whitespace + string.punctuation)
+        str1_clean = str1.translate(translator)
+        str2_clean = str2.translate(translator)
+
+        return str1_clean.lower() == str2_clean.lower()
     
     def refresh_country(self):
         self.country = get_random_country()
@@ -19,7 +26,7 @@ class Game:
         return self.country
     
     def check_answer(self, answer):
-        if answer == self.country.name:
+        if self.cmp_ans(answer, self.country):
             self.score += 10
             return (True, self.country.name)
         else:
