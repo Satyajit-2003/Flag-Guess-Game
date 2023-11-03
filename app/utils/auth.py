@@ -61,3 +61,13 @@ def register_(request):
         return 1
     except:
         return 0
+    
+def get_user(token):
+    if not token:
+        return None
+    try:
+        data = jwt.decode(token, app.config['SECRET_KEY'],algorithms="HS256")
+        current_user = User.query.filter_by(user_id=data['user_id']).first()
+        return current_user
+    except:
+        return None

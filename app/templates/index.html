@@ -1,15 +1,51 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Flask App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Country</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Include custom CSS -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/game.css') }}">
 </head>
 <body>
-    <input type="text" id="message-input" placeholder="Type a message">
-    <button id="send-button">Send</button>
-    <div id="message-display"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js"></script>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <div class="header">
+        <div class="user-info">
+            Hi <span id="user-name"></span>!
+        </div>
+        <div class="header-buttons">
+            <button class="btn btn-secondary" id="end-button">End Round</button>
+            <button class="btn btn-danger" id="logout-button">Log Out</button>
+        </div>
+    </div>
+    <div class="game-container">
+        <div class="score">
+            <div class="score d-flex justify-content-between">
+                <div>
+                    <span id="score-label">Score:</span> <span id="score-value">0</span>
+                </div>
+                <div>
+                    <span id="high-score-label">High Score:</span> <span id="high-score-value">0</span>
+                </div>
+            </div>
+        </div>
+        <img class="country-flag" id="country-flag" src="" alt="Flag of a country" width="400" height="400">
+        <div id="answer" class="answer-container">
+            <span id="answer-label"></span> &nbsp; <span id="answer-key"></span>
+        </div>
+        <div class="input-group">
+            <input type="text" class="form-control" id="guess-input" placeholder="Guess the country">
+            <div class="input-group-append">
+                <button class="btn btn-primary" id="send-button">Send</button>
+            </div>
+        </div>
+    </div>
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- Include socketio -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
+    <!-- Include custom JS -->
+    <script src="{{ url_for('static',filename='js/game.js') }}"></script>
 </body>
 </html>

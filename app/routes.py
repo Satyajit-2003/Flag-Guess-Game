@@ -1,9 +1,7 @@
-from app import app, socketio
-from flask import flash, render_template, redirect, url_for, request, make_response, jsonify
-from flask_socketio import emit
+from app import app
+from flask import flash, render_template, redirect, url_for, request, make_response
 from app.utils.auth import token_required, login_, register_
-
-
+# User authentication routes
 @app.route('/')
 @token_required
 def index(user):
@@ -36,4 +34,9 @@ def register():
         else:
             flash('Registration failed!', 'danger')
     return render_template('register.html')
-    
+
+@app.route('/logout')
+def logout():
+    resp = make_response(redirect(url_for('login')))
+    resp.set_cookie('token', '', expires=0)
+    return resp

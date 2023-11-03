@@ -281,3 +281,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Custom
+.idea/
+app/db/*.db

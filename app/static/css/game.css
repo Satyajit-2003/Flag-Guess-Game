@@ -1,0 +1,60 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+.header-buttons button {
+    margin-left: 10px;
+}
+.game-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.country-flag {
+    max-width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.input-group {
+    margin-top: 10px;
+}
+.score {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.answer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+#score-label, #high-score-label {
+    margin-right: 10px;
+}
+#user-info {
+    display: flex;
+    margin-left: 20px;
+}
+#user-name {
+    font-weight: bold;
+}
