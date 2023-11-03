@@ -1,4 +1,4 @@
-var socket = io.connect("http://" + document.location.hostname + ":" + location.port);
+var socket = io.connect("https://" + document.location.hostname + ":" + location.port);
 
 socket.on("connect", function() {
     console.log("connected");

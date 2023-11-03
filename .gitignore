@@ -282,6 +282,14 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+### replit ###
+# Replit config file
+.replit
+
+# Replit Nix config file
+replit.nix
+.pythonlibs
+
 # Custom
 .idea/
 app/db/*.db

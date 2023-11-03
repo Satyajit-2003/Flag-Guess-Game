@@ -4,7 +4,7 @@ from flask_socketio import SocketIO
 from config import Config
 
 app = Flask(__name__)
-socketio = SocketIO(app)
+socketio = SocketIO(app, ssl_context='adhoc')
 
 app.config.from_object(Config)
 
