@@ -5,5 +5,3 @@ class Config:
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(os.path.abspath(os.path.dirname(__file__)), 'app', 'db', 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DATA_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'app', 'db', 'countries.json')
-    with open(SQLALCHEMY_DATABASE_URI.split('sqlite:///')[1], 'a') as f:
-        f.close()

@@ -4,8 +4,13 @@ from app.utils.auth import get_user, token_required
 from flask import request
 from time import sleep
 
-games = {}
+# dictionary of games currently active
+games = {} # {user_id: Game}
 
+# socketio events\
+# connect: when a client connects to the server
+# Updates the client with the user's highscore and current score
+# Updates the client with the current country's flag
 @socketio.on('connect')
 def connect():
     user = get_user(request.cookies['token'])
@@ -16,8 +21,12 @@ def connect():
     socketio.emit('update', {'user': user.user_id ,'highscore': str(user.high_score),
                               'score': str(games[user.user_id].get_score())})
     socketio.emit('update_country', {'flag': games[user.user_id].get_country().flag})
-    print(games[user.user_id].get_country().name)
+    print(games[user.user_id].get_country().name, 'connected')
 
+# answer: when a client answers a question
+# Checks if the answer is correct and sends the result to the client
+# Updates the client with the user's highscore and current score
+# wait 5 seconds and update the client with the new country's flag
 @socketio.on('answer')
 def answer(data):
     user = get_user(request.cookies['token'])
@@ -31,6 +40,8 @@ def answer(data):
     games[user.user_id].refresh_country()
     socketio.emit('update_country', {'flag': games[user.user_id].get_country().flag})
 
+# end: when a client disconnects from the server
+# Deletes the game object from the games dictionary
 @socketio.on('end')
 def end():
     user = get_user(request.cookies['token'])
