@@ -26,7 +26,7 @@ class Game:
         return self.country
     
     def check_answer(self, answer):
-        if self.cmp_ans(answer, self.country):
+        if self.cmp_ans(answer, self.country.name):
             self.score += 10
             return (True, self.country.name)
         else:
