@@ -71,3 +71,9 @@ function end() {
   socket.emit("connect");
 }
 document.getElementById("end-button").addEventListener("click", end);
+
+// Reveals the answer
+function reveal() {
+  socket.emit("answer", { answer: "reveal" });
+}
+document.getElementById("reveal-button").addEventListener("click", reveal);
