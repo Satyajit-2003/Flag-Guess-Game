@@ -29,6 +29,9 @@ socket.on("result", function(msg) {
 
 function send_answer() {
     var answer = document.getElementById("guess-input").value;
+    if (answer == "") {
+        return;
+    }
     document.getElementById("guess-input").value = "";
     socket.emit("answer", {"answer": answer});
 }
