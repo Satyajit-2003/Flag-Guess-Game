@@ -3,6 +3,16 @@
 ## Description
 This is a simple flag guessing game. The flag is hidden in the source code of the program. The program will ask you to guess the flag. If you guess correctly, you win. If you guess incorrectly, you lose. 
 
+## Contributors
+
+<table>
+    <tr>
+        <td align="center"><a href="https://github.com/Satyajit-2003"><img src="https://avatars.githubusercontent.com/u/74524306?v=4" width="100px;" alt=""/><br /><sub><b>Satyajit Satapathy</b></sub></a><br /></td>
+        <td align="center"><a href="https://github.com/tannu-ck21"><img src="https://avatars.githubusercontent.com/u/118547911?v=4" width="100px;" alt=""/><br /><sub><b>Tannu Kumari</b></sub></a><br /></td>
+    </tr>
+</table>
+
+
 ## How to Play
 1. Go to the [website](https://flag-guess-game.satyajitsatapat.repl.co/).
 2. Register for an account.
