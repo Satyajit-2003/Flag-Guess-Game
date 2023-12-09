@@ -34,10 +34,9 @@ class Game:
     # Checks answer, returns (correct or incorrect, country name)
     def check_answer(self, answer):
         if self.cmp_ans(answer, self.country.name):
-            self.score += 10
+            self.score += 5
             return (True, self.country.name)
         else:
-            self.score -= 5
             return (False, self.country.name)
     
     # Returns current score

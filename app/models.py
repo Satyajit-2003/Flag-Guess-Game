@@ -11,18 +11,12 @@ class User(db.Model):
     password = db.Column(db.String(80))
     high_score = db.Column(db.Integer, default=0)
 
-    def __repr__(self):
-        return '<User %r>' % self.user_id
-    
 # Database to store countries
 class Country(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(50))
     code = db.Column(db.String(2))
     flag = db.Column(db.String(100))
-
-    def __repr__(self):
-        return '<Country %r>' % self.country_name
 
 # Load countries from JSON file into database
 def load_countries():

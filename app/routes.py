@@ -2,7 +2,7 @@ from app import app
 from flask import flash, render_template, redirect, url_for, request, make_response
 from app.utils.auth import token_required, login_, register_
 
-# Check if user is logged in and redirect to login page if not logged in
+# Check if user is not logged in and redirect to login page if logged in
 # else redirect to index page
 @app.route('/')
 @token_required

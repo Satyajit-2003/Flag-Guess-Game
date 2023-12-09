@@ -1,6 +1,6 @@
 from app import socketio
 from app.utils.game import Game
-from app.utils.auth import get_user, token_required
+from app.utils.auth import get_user
 from flask import request
 from time import sleep
 
@@ -31,7 +31,6 @@ def connect():
 def answer(data):
     user = get_user(request.cookies['token'])
     print('Client answered', user.user_id)
-    print(data)
     res = games[user.user_id].check_answer(data['answer'])
     socketio.emit('result', {'result': res[0], 'answer': res[1]})
     socketio.emit('update', {'user': user.user_id ,'highscore': str(user.high_score),

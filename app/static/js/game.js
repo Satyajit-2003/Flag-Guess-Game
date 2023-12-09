@@ -12,8 +12,7 @@ socket.on("connect", function () {
 socket.on("update", function (msg) {
   document.getElementById("user-name").innerHTML = msg.user;
   document.getElementById("score-value").innerHTML = msg.score.toString();
-  document.getElementById("high-score-value").innerHTML =
-    msg.highscore.toString();
+  document.getElementById("high-score-value").innerHTML = msg.highscore.toString();
 });
 
 // Updates the country flag and clears the answer labels of previous answers
