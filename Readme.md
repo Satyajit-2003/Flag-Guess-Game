@@ -9,6 +9,7 @@ This is a simple flag guessing game. The flag is hidden in the source code of th
     <tr>
         <td align="center"><a href="https://github.com/Satyajit-2003"><img src="https://avatars.githubusercontent.com/u/74524306?v=4" width="100px;" alt=""/><br /><sub><b>Satyajit Satapathy</b></sub></a><br /></td>
         <td align="center"><a href="https://github.com/tannu-ck21"><img src="https://avatars.githubusercontent.com/u/118547911?v=4" width="100px;" alt=""/><br /><sub><b>Tannu Kumari</b></sub></a><br /></td>
+        <td align="center"><a href="https://github.com/NanditaRanjan"><img src="https://avatars.githubusercontent.com/u/119003966?v=4" width="100px;" alt=""/><br /><sub><b>Nandita Ranjan</b></sub></a><br /></td>
     </tr>
 </table>
 
