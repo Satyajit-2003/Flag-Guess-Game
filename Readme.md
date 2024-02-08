@@ -14,11 +14,12 @@ This is a simple flag guessing game. The flag is hidden in the source code of th
 
 
 ## How to Play
-1. Go to the [website](https://flag-guess-game.satyajitsatapat.repl.co/).
+Note: The game is not working due to discontinuation free hosting by repl.it. You can host the game locally by following the instructions below.
+<!-- 1. Go to the [website](https://flag-guess-game.satyajitsatapat.repl.co/).
 2. Register for an account.
 3. Login to your account.
 4. Guess the flag.
-5. If you guess correctly, you score points. If you guess incorrectly, you lose points.
+5. If you guess correctly, you score points. If you guess incorrectly, you lose points. -->
 
 ## Host the game locally
 1. Clone the repository.
